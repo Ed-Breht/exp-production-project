@@ -8,5 +8,7 @@
   "Короткий язык": "En",
   "Войти": "Sign",
   "increment": "Increment",
-  "decrement": "Decrement"
+  "decrement": "Decrement",
+  "Введите username": "Login",
+  "Введите пароль": "Password"
 }
