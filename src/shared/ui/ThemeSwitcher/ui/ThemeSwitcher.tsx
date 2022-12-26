@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import {Theme, useTheme} from "app/providers/ThemeProvider";
 import DarkIcon from "shared/assets/icons/theme-dark.svg"
@@ -9,7 +9,7 @@ interface ThemeSwithcerProps {
     className?: string;
 }
 
-export const ThemeSwitcher = ({className}: ThemeSwithcerProps) => {
+export const ThemeSwitcher = memo(({className}: ThemeSwithcerProps) => {
     const {theme, toggleTheme} = useTheme()
 
     return (
@@ -18,4 +18,4 @@ export const ThemeSwitcher = ({className}: ThemeSwithcerProps) => {
         </Button>
 
     );
-};
+});
