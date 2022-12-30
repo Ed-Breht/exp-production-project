@@ -1,37 +1,137 @@
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from "./ProfileCard.module.scss";
-import {useTranslation} from "react-i18next";
-import {useSelector} from "react-redux";
-import {getProfileData} from "entities/Profile/modal/selectors/getProfileData/getProfileData";
-import {getProfileIsLoading} from "entities/Profile/modal/selectors/getProfileIsLoading/getProfileIsLoading";
-import {getProfileError} from "entities/Profile/modal/selectors/getProfileError/getProfileError";
-import {Text} from "shared/ui/Text/Text";
-import {Button, ButtonTheme} from "shared/ui/Button/Button";
-import { Input } from "shared/ui/Input/Input";
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { Input } from 'shared/ui/Input/Input';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Currency, CurrencySelect } from 'entities/Currency';
+import { Country, CountrySelect } from 'entities/Country';
+import { Profile } from '../../modal/types/Profile';
+import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
-  className?: string;
+    className?: string;
+    data?: Profile;
+    error?: string;
+    isLoading?: boolean;
+    readonly?: boolean
+    onChangeLastname?: (value?: string) => void;
+    onChangeFirstname?: (value?: string) => void;
+    onChangeAge?: (value?: string) => void;
+    onChangeCity?: (value?: string) => void;
+    onChangeUsername?: (value?: string) => void;
+    onChangeAvatar?: (value?: string) => void;
+    onChangeCurrency?: (currency: Currency) => void;
+    onChangeCountry?: (country: Country) => void;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
-  const { t } = useTranslation('profile');
-  const { className } = props;
+    const { t } = useTranslation('profile');
+    const {
+        className,
+        error,
+        isLoading,
+        data,
+        readonly,
+        onChangeLastname,
+        onChangeFirstname,
+        onChangeAge,
+        onChangeCity,
+        onChangeUsername,
+        onChangeAvatar,
+        onChangeCurrency,
+        onChangeCountry,
+    } = props;
 
-  const data = useSelector(getProfileData);
-  const isLoading = useSelector(getProfileIsLoading);
-  const error = useSelector(getProfileError);
-  return (
-    <div className={classNames(cls.ProfileCard, {}, [className])}>
-      <div className={cls.header}>
-        <Text title={t('Профиль')} />
-        <Button theme={ButtonTheme.OUTLINE} className={cls.editBtn}>
-          {t("Редактировать")}
-        </Button>
-      </div>
-      <div className={cls.data}>
-        <Input value={data?.first} placeholder={t("Ваше имя")} className={cls.input} />
-        <Input value={data?.lastname} placeholder={t("Ваша фамилия")} className={cls.input} />
-      </div>
-    </div>
-  );
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+                <Loader />
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+                <Text
+                    title={t('Произошла ошибка при загрузке профиля')}
+                    text={t('Попробуйте обновить страницу')}
+                    theme={TextTheme.ERROR}
+                    align={TextAlign.CENTER}
+                />
+            </div>
+        );
+    }
+
+    const mods: Mods = {
+        [cls.editing]: !readonly,
+    };
+
+    return (
+        <div className={classNames(cls.ProfileCard, mods, [className])}>
+            <div className={cls.data}>
+                {data?.avatar && (
+                    <div className={cls.avatarWrapper}>
+                        <Avatar size={150} src={data?.avatar} />
+                    </div>
+                )}
+                <Input
+                    value={data?.first}
+                    onChange={onChangeFirstname}
+                    placeholder={t('Ваше имя')}
+                    className={cls.input}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.lastname}
+                    onChange={onChangeLastname}
+                    placeholder={t('Ваша фамилия')}
+                    className={cls.input}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.age}
+                    placeholder={t('Возраст')}
+                    className={cls.input}
+                    readonly={readonly}
+                    onChange={onChangeAge}
+                    type="number"
+                />
+                <Input
+                    value={data?.city}
+                    onChange={onChangeCity}
+                    placeholder={t('Город')}
+                    className={cls.input}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.username}
+                    onChange={onChangeUsername}
+                    placeholder={t('Имя пользователя')}
+                    className={cls.input}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.avatar}
+                    onChange={onChangeAvatar}
+                    placeholder={t('Ссылка на аватар')}
+                    className={cls.input}
+                    readonly={readonly}
+                />
+                <CurrencySelect
+                    className={cls.input}
+                    readonly={readonly}
+                    onChange={onChangeCurrency}
+                    value={data?.currency}
+                />
+                <CountrySelect
+                    className={cls.input}
+                    readonly={readonly}
+                    onChange={onChangeCountry}
+                    value={data?.country}
+                />
+            </div>
+        </div>
+    );
 };

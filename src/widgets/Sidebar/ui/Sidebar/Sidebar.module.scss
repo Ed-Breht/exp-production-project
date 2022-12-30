@@ -2,7 +2,6 @@
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
-
   position: relative;
   transition: width 0.3s;
 }
@@ -19,10 +18,10 @@
   margin-left: 20px;
 }
 
-.collapsedBtn {
+.collapseBtn {
   position: absolute;
   right: -32px;
-  bottom: 40px;
+  bottom: 32px;
 }
 
 .items {
@@ -32,16 +31,15 @@
   flex-direction: column;
 }
 
-
-
 .collapsed {
   width: var(--sidebar-width-collapsed);
+
   .switchers {
     flex-direction: column;
     align-items: center;
   }
+
   .lang {
     margin-left: 0;
   }
-
 }
