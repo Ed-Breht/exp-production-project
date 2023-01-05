@@ -107,13 +107,17 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://preview.redd.it/4u8fx21akoz31.jpg?width=1500&format=pjpg&auto=webp&s=0985ff4181ec43bf7ef980d447ee5184379f7b54"
+
     }
   ],
   "profile": {
@@ -124,6 +128,6 @@
     "country": "Belarus",
     "city": "Moscow",
     "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    "avatar": "https://preview.redd.it/4u8fx21akoz31.jpg?width=1500&format=pjpg&auto=webp&s=0985ff4181ec43bf7ef980d447ee5184379f7b54"
   }
 }

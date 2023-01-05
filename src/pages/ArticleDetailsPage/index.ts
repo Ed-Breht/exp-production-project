@@ -1,3 +1,3 @@
-import { ArticleDetailsPageAsync } from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
+export { ArticleDetailsPageAsync as ArticleDetailsPage } from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
 
-export { ArticleDetailsPageAsync as ArticleDetailsPage };
+export { ArticleDetailsCommentsSchema } from './modal/types/ArticleDetailsCommentsSchema';
