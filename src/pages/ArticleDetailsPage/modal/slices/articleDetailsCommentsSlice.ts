@@ -37,6 +37,7 @@ const articleDetailsCommentsSlice = createSlice({
                 state,
                 action: PayloadAction<Comment[]>,
             ) => {
+                state.error = undefined;
                 state.isLoading = false;
                 commentsAdapter.setAll(state, action.payload);
             })
