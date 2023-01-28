@@ -1,5 +1,4 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { fetchArticleById } from 'entities/Article/modal/services/fetchArticleById';
 import { fetchProfileData } from 'entities/Profile';
 import { ArticleBlockType, ArticleType } from '../types/article';
 import { Article } from '../types/Article';
