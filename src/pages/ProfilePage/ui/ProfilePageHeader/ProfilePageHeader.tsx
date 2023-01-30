@@ -9,7 +9,7 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDipstch';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -40,28 +40,37 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     );
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack max justify="between" className={classNames('', {}, [className])}>
             <Text title={t('Профиль')} />
             {canEdit && (
-                <div className={cls.btnsWrapper}>
-                    {readonly ? (
-                        <Button theme={ButtonTheme.OUTLINE} onClick={onEdit} className={cls.editBtn}>
-                            {t('Редактировать')}
-                        </Button>
-                    ) : (
-                        <>
-                            <Button theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit} className={cls.editBtn}>
-                                {t('Отменить')}
+                <div>
+                    {readonly
+                        ? (
+                            <Button
+                                theme={ButtonTheme.OUTLINE}
+                                onClick={onEdit}
+                            >
+                                {t('Редактировать')}
                             </Button>
-                            <Button theme={ButtonTheme.OUTLINE} onClick={onSave} className={cls.saveBtn}>
-                                {t('Сохранить')}
-                            </Button>
-                        </>
-
-                    )}
+                        )
+                        : (
+                            <HStack gap="8">
+                                <Button
+                                    theme={ButtonTheme.OUTLINE_RED}
+                                    onClick={onCancelEdit}
+                                >
+                                    {t('Отменить')}
+                                </Button>
+                                <Button
+                                    theme={ButtonTheme.OUTLINE}
+                                    onClick={onSave}
+                                >
+                                    {t('Сохранить')}
+                                </Button>
+                            </HStack>
+                        )}
                 </div>
             )}
-
-        </div>
+        </HStack>
     );
 };

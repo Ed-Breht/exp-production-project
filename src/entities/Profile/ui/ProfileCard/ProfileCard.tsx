@@ -6,6 +6,7 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { Profile } from '../../modal/types/Profile';
 import cls from './ProfileCard.module.scss';
 
@@ -45,22 +46,22 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <HStack justify="center" className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
                 <Loader />
-            </div>
+            </HStack>
         );
     }
 
     if (error) {
         return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <HStack justify="center" className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
                 <Text
                     title={t('Произошла ошибка при загрузке профиля')}
                     text={t('Попробуйте обновить страницу')}
                     theme={TextTheme.ERROR}
                     align={TextAlign.CENTER}
                 />
-            </div>
+            </HStack>
         );
     }
 
@@ -69,69 +70,67 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <div className={classNames(cls.ProfileCard, mods, [className])}>
-            <div className={cls.data}>
-                {data?.avatar && (
-                    <div className={cls.avatarWrapper}>
-                        <Avatar size={150} src={data?.avatar} />
-                    </div>
-                )}
-                <Input
-                    value={data?.first}
-                    onChange={onChangeFirstname}
-                    placeholder={t('Ваше имя')}
-                    className={cls.input}
-                    readonly={readonly}
-                />
-                <Input
-                    value={data?.lastname}
-                    onChange={onChangeLastname}
-                    placeholder={t('Ваша фамилия')}
-                    className={cls.input}
-                    readonly={readonly}
-                />
-                <Input
-                    value={data?.age}
-                    placeholder={t('Возраст')}
-                    className={cls.input}
-                    readonly={readonly}
-                    onChange={onChangeAge}
-                    type="number"
-                />
-                <Input
-                    value={data?.city}
-                    onChange={onChangeCity}
-                    placeholder={t('Город')}
-                    className={cls.input}
-                    readonly={readonly}
-                />
-                <Input
-                    value={data?.username}
-                    onChange={onChangeUsername}
-                    placeholder={t('Имя пользователя')}
-                    className={cls.input}
-                    readonly={readonly}
-                />
-                <Input
-                    value={data?.avatar}
-                    onChange={onChangeAvatar}
-                    placeholder={t('Ссылка на аватар')}
-                    className={cls.input}
-                    readonly={readonly}
-                />
-                <CurrencySelect
-                    className={cls.input}
-                    readonly={readonly}
-                    onChange={onChangeCurrency}
-                    value={data?.currency}
-                />
-                <CountrySelect
-                    className={cls.input}
-                    readonly={readonly}
-                    onChange={onChangeCountry}
-                    value={data?.country}
-                />
-            </div>
-        </div>
+        <VStack max gap="16" className={classNames(cls.ProfileCard, mods, [className])}>
+            {data?.avatar && (
+                <HStack justify="center" max className={cls.avatarWrapper}>
+                    <Avatar size={150} src={data?.avatar} />
+                </HStack>
+            )}
+            <Input
+                value={data?.first}
+                onChange={onChangeFirstname}
+                placeholder={t('Ваше имя')}
+                className={cls.input}
+                readonly={readonly}
+            />
+            <Input
+                value={data?.lastname}
+                onChange={onChangeLastname}
+                placeholder={t('Ваша фамилия')}
+                className={cls.input}
+                readonly={readonly}
+            />
+            <Input
+                value={data?.age}
+                placeholder={t('Возраст')}
+                className={cls.input}
+                readonly={readonly}
+                onChange={onChangeAge}
+                type="number"
+            />
+            <Input
+                value={data?.city}
+                onChange={onChangeCity}
+                placeholder={t('Город')}
+                className={cls.input}
+                readonly={readonly}
+            />
+            <Input
+                value={data?.username}
+                onChange={onChangeUsername}
+                placeholder={t('Имя пользователя')}
+                className={cls.input}
+                readonly={readonly}
+            />
+            <Input
+                value={data?.avatar}
+                onChange={onChangeAvatar}
+                placeholder={t('Ссылка на аватар')}
+                className={cls.input}
+                readonly={readonly}
+            />
+            <CurrencySelect
+                className={cls.input}
+                readonly={readonly}
+                onChange={onChangeCurrency}
+                value={data?.currency}
+            />
+            <CountrySelect
+                className={cls.input}
+                readonly={readonly}
+                onChange={onChangeCountry}
+                value={data?.country}
+            />
+        </VStack>
     );
 };
