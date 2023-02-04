@@ -8,6 +8,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDipstch';
 import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
+import { ArticleInfiniteList } from 'pages/ArticlesPage/ui/ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { initArticlesPage } from '../../modal/services/initArticlesPage/initArticlesPage';
 import {
@@ -31,29 +32,21 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const { t } = useTranslation('article');
     const { className } = props;
     const dispatch = useAppDispatch();
-    const articles = useSelector(getArticles.selectAll);
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const view = useSelector(getArticlesPageView);
-    const error = useSelector(getArticlesPageError);
     const [searchParams] = useSearchParams();
+
+    useInitialEffect(() => {
+        dispatch(initArticlesPage(searchParams));
+    });
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
 
-    useInitialEffect(() => {
-        dispatch(initArticlesPage(searchParams));
-    });
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlesPage, {}, [className])}>
                 <ArticlesPageFilters />
-                <ArticleList
-                    view={view}
-                    articles={articles}
-                    isLoading={isLoading}
-                    className={cls.list}
-                />
+                <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
     );
