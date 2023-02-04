@@ -1,22 +1,15 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { ArticleList } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDipstch';
-import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
-import { ArticleInfiniteList } from 'pages/ArticlesPage/ui/ArticleInfiniteList/ArticleInfiniteList';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { initArticlesPage } from '../../modal/services/initArticlesPage/initArticlesPage';
-import {
-    getArticlesPageError,
-    getArticlesPageIsLoading,
-    getArticlesPageView,
-} from '../../modal/selectors/articlesPageSelectors';
-import { articlesPageReducer, getArticles } from '../../modal/slices/articlesPageSlice';
+import { articlesPageReducer } from '../../modal/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { fetchNextArticlesPage } from '../../modal/services/fetchNextArticlesPage/fetchNextArticlesPage';
 

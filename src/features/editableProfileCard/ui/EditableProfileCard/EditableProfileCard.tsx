@@ -26,7 +26,6 @@ import {
     getProfileIsLoading,
 } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
-import cls from './EditableProfileCard.module.scss';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -119,7 +118,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <VStack gap="8" max className={classNames(cls.EditableProfileCard, {}, [className])}>
+            <VStack gap="8" max className={classNames('', {}, [className])}>
                 <EditableProfileCardHeader />
                 {validationError?.length && validationError.map((error) => (
                     <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslate[error]} />

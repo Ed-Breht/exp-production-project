@@ -7,7 +7,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
-import { ArticleDetailsComments } from '../../ui/ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../modal/slices';
 import cls from './ArticleDetailsPage.module.scss';
