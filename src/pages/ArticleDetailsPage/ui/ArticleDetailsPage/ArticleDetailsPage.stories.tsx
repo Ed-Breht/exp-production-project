@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/modal/types/article';
+import { Article, ArticleType } from 'entities/Article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ArticleBlockType } from 'entities/Article/modal/consts/consts';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {

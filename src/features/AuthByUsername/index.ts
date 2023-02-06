@@ -1,2 +1,2 @@
 export { LoginModal } from './ui/LoginModal/LoginModal';
-export { LoginSchema } from './modal/type/loginSchema';
+export type { LoginSchema } from './modal/type/loginSchema';
