@@ -7,17 +7,15 @@ import { CommentList } from 'entities/Comment';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDipstch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import {
-    fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/modal/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { VStack } from 'shared/ui/Stack';
 import { getArticleComments } from '../../modal/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../modal/selectors/comments';
 import { addCommentForArticle } from '../../modal/services/addCommentForArticle/addCommentForArticle';
+import { fetchCommentsByArticleId } from '../../modal/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 interface ArticleDetailsCommentsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
