@@ -1,13 +1,13 @@
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { loginReducer } from 'features/AuthByUsername/modal/slice/loginSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from 'entities/Article/modal/slice/articleDetailsSlice';
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
+import { loginReducer } from 'features/AuthByUsername/modal/slice/loginSlice';
+import { articleDetailsReducer } from 'entities/Article';
 import { addCommentFormReducer } from 'features/addCommentForm/modal/slice/addCommentFormSlice';
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/modal/slices';
-import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 
-const defaultAsyncReducers:ReducersList = {
+const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
@@ -19,7 +19,7 @@ export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
     asyncReducers?: ReducersList,
 ) => (StoryComponent: Story) => (
-    <StoreProvider initialState={state} asyncReducer={{ ...defaultAsyncReducers, ...asyncReducers }}>
+    <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
         <StoryComponent />
     </StoreProvider>
 );

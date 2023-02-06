@@ -16,7 +16,7 @@
       "id": "1",
       "title": "Javascript news СВЕЖАЯ",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "img": "https://cdn.leroymerlin.ru/lmru/image/upload/v1638465507/b_white,c_pad,d_photoiscoming.png,f_auto,h_600,q_auto,w_600/lmcode/DknO8taxA0ucTQy2Gm7WuA/90154869_01.jpg",
       "views": 1022,
       "createdAt": "26.04.2022",
       "userId": "1",
@@ -88,7 +88,7 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://248006.selcdn.ru/LandGen/phone_e6b6a1e7b0e53cd139271de19f550d42aff2415b.png",
       "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -112,7 +112,7 @@
       "id": "3",
       "title": "Kotlin news 2019",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
+      "img": "https://media.proglib.io/wp-uploads/2017/10/kotlin.jpg",
       "views": 94002,
       "createdAt": "26.02.2019",
       "userId": "1",
@@ -136,7 +136,7 @@
       "id": "4",
       "title": "Scala news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://coursefreedl.com/wp-content/uploads/2020/01/Scala-Zero-To-Hero-Complete-Guide.jpg",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Scala-full-color.svg/1200px-Scala-full-color.svg.png",
       "views": 10222,
       "createdAt": "24.01.2022",
       "userId": "1",
@@ -632,28 +632,35 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "role": ["ADMIN"],
+      "avatar": "https://ixbt.online/live/images/original/16/60/78/2021/08/01/333b5d9430.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "role": ["USER"],
+      "avatar": "https://images.ctfassets.net/rporu91m20dc/4KfNOlByi3gJjEQWq0sGOQ/2c6b7a1326dd4c36d476cc26f8385129/DE_Xous54_Daisy_MOBILE_633x424.jpg?q=70"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "role": ["MANAGER"],
+      "avatar": "https://images.ctfassets.net/rporu91m20dc/4KfNOlByi3gJjEQWq0sGOQ/2c6b7a1326dd4c36d476cc26f8385129/DE_Xous54_Daisy_MOBILE_633x424.jpg?q=70"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "sdf113",
+      "first": "sdf113dasdasdasd",
       "lastname": "asfewr",
       "age": 465,
       "currency": "EUR",
       "country": "Russia",
       "city": "Moscow",
       "username": "admin213",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://ecigdiscount.ru/1356-3051-thickbox/akkumuljator-21700-eleaf-avatar-controls-avb-4000-mach-30-a.jpg"
     },
     {
       "id": "2",
