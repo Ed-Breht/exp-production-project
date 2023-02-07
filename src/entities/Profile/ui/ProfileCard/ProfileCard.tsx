@@ -7,7 +7,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
 import { HStack, VStack } from 'shared/ui/Stack';
-import { Profile } from '../../modal/types/Profile';
+import { Profile } from '../../modal/types/profile';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
