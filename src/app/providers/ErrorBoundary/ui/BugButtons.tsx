@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/shared/ui/Button/Button';
 
 // Компонент для тестирования
 export const BugButtons = () => {

@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
-import { getUserAuthData, getUserRole, UserRole } from 'entities/User';
 import { Navigate, useLocation } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { useMemo } from 'react';
-import { ForbiddenPage } from 'pages/ForbiddenPage';
+import { getUserAuthData, getUserRole, UserRole } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
 
 interface requireAuthProps {
     children: JSX.Element;
