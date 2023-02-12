@@ -33,24 +33,12 @@
       "userId": "2"
     }
   ],
-  "posts": [
-    {
-      "id": "1",
-      "title": "json-server",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "title": "json-server",
-      "userId": "2"
-    }
-  ],
   "articles": [
     {
       "id": "1",
       "title": "Javascript news СВЕЖАЯ",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://cdn.leroymerlin.ru/lmru/image/upload/v1638465507/b_white,c_pad,d_photoiscoming.png,f_auto,h_600,q_auto,w_600/lmcode/DknO8taxA0ucTQy2Gm7WuA/90154869_01.jpg",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.04.2022",
       "userId": "1",
@@ -122,7 +110,7 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://248006.selcdn.ru/LandGen/phone_e6b6a1e7b0e53cd139271de19f550d42aff2415b.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -146,7 +134,7 @@
       "id": "3",
       "title": "Kotlin news 2019",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://media.proglib.io/wp-uploads/2017/10/kotlin.jpg",
+      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
       "views": 94002,
       "createdAt": "26.02.2019",
       "userId": "1",
@@ -170,7 +158,7 @@
       "id": "4",
       "title": "Scala news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Scala-full-color.svg/1200px-Scala-full-color.svg.png",
+      "img": "https://coursefreedl.com/wp-content/uploads/2020/01/Scala-Zero-To-Hero-Complete-Guide.jpg",
       "views": 10222,
       "createdAt": "24.01.2022",
       "userId": "1",
@@ -631,34 +619,82 @@
       "id": "p5rMadd"
     },
     {
-      "articleId": "7",
+      "articleId": "3",
       "userId": "1",
-      "text": "fdsf",
-      "id": "xajqHbw"
+      "text": "123213",
+      "id": "Zu_RNuF"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "dfdsf",
+      "id": "4rFHQgJ"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "sdfsdf",
+      "id": "yYEdTI-"
     },
     {
       "articleId": "7",
       "userId": "1",
-      "text": "sdfsdf",
-      "id": "VzRljVB"
+      "text": "123213",
+      "id": "TR1yDY6"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "112",
+      "id": "wSAhqy5"
+    },
+    {
+      "articleId": "18",
+      "userId": "1",
+      "text": "12",
+      "id": "r6b1z-N"
+    },
+    {
+      "articleId": "18",
+      "userId": "2",
+      "text": "привет",
+      "id": "DENfTu6"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "33",
+      "id": "Ps59wrg"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "zzYVth3"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "WjF4c_d"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "privet",
+      "id": "fta748h"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "питон топ",
+      "id": "ZlmlUrg"
     },
     {
       "articleId": "7",
       "userId": "1",
       "text": "123",
-      "id": "GhkhPes"
-    },
-    {
-      "articleId": "4",
-      "userId": "1",
-      "text": "dfsdf",
-      "id": "zTflHaf"
-    },
-    {
-      "articleId": "7",
-      "userId": "1",
-      "text": "dfgdfg",
-      "id": "qy5OvX5"
+      "id": "KmtWJR_"
     }
   ],
   "users": [
@@ -666,46 +702,118 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
-      "avatar": "https://ixbt.online/live/images/original/16/60/78/2021/08/01/333b5d9430.jpg"
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://yakutsk.ru/wp-content/uploads/2022/07/12/bystrov_haker.jpeg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
-      "avatar": "https://images.ctfassets.net/rporu91m20dc/4KfNOlByi3gJjEQWq0sGOQ/2c6b7a1326dd4c36d476cc26f8385129/DE_Xous54_Daisy_MOBILE_633x424.jpg?q=70"
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
-      "avatar": "https://images.ctfassets.net/rporu91m20dc/4KfNOlByi3gJjEQWq0sGOQ/2c6b7a1326dd4c36d476cc26f8385129/DE_Xous54_Daisy_MOBILE_633x424.jpg?q=70"
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "sdf113dasdasdasd",
-      "lastname": "asfewr",
+      "first": "timur",
+      "lastname": "ulbi",
       "age": 465,
-      "currency": "EUR",
-      "country": "Russia",
+      "currency": "RUB",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
-      "avatar": "https://ecigdiscount.ru/1356-3051-thickbox/akkumuljator-21700-eleaf-avatar-controls-avb-4000-mach-30-a.jpg"
+      "avatar": "https://yt3.ggpht.com/ytc/AKedOLTYUJxG8Hu036PQ_TXpMLq2fG8Kj8NZI4h0lbn_3g=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "2",
       "first": "ulbi tv",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "EUR",
+      "country": "Ukraine",
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 3,
+      "id": "eoBqrop"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
