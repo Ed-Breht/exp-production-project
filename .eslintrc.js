@@ -59,6 +59,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'ed-product-plugin/path-checker': ['error', { alias: '@' }],
+        'ed-product-plugin/publick-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
