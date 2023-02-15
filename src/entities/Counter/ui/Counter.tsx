@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 import { counterActions } from '../modal/slice/counterSlice';
 import { getCounterValue } from '../modal/selectors/getCounterValue/getCounterValue';
 
