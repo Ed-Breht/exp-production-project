@@ -7,7 +7,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';
 import { getCanEditArticle } from '../../modal/selectors/article';
-import { RoutePath } from '@/shared/consts/router';
+import { RoutePath } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;

@@ -14,7 +14,7 @@ import {
 } from '../../modal/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { RoutePath } from '@/shared/consts/router';
+import { RoutePath } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;

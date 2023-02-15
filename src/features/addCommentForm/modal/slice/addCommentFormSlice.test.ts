@@ -1,3 +1,4 @@
+// eslint-disable-next-line ed-product-plugin/layer-imports
 import { LoginSchema } from '@/features/AuthByUsername';
 import { AddCommentFormSchema } from '../types/addCommentForm';
 import { addCommentFormActions, addCommentFormReducer } from './addCommentFormSlice';

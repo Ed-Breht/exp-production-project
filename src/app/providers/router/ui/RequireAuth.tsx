@@ -3,7 +3,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { useMemo } from 'react';
 import { getUserAuthData, getUserRole, UserRole } from '@/entities/User';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
-import { RoutePath } from '@/shared/consts/router';
+import { RoutePath } from '@/shared/const/router';
 
 interface requireAuthProps {
     children: JSX.Element;

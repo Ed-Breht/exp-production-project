@@ -5,7 +5,7 @@ import AboutIcon from '@/shared/assets/icons/clarity_list-outline-badged.svg';
 import ProfileIcon from '@/shared/assets/icons/Profile.svg';
 import ArticlesIcon from '@/shared/assets/icons/Articles.svg';
 import { SidebarItemType } from '../types/sidebar';
-import { RoutePath } from '@/shared/consts/router';
+import { RoutePath } from '@/shared/const/router';
 
 export const getSidebarItems = createSelector(
     getUserAuthData,

@@ -11,7 +11,7 @@ import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
-import { RoutePath } from '@/shared/consts/router';
+import { RoutePath } from '@/shared/const/router';
 
 interface NavbarProps {
     className?: string;
