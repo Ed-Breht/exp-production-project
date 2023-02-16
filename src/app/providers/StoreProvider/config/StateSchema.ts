@@ -7,9 +7,7 @@ import { UserSchema } from '@/entities/User';
 import { LoginSchema } from '@/features/AuthByUsername';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import {
-    ArticleDetailsCommentsSchema,
     ArticleDetailsPageSchema,
-    ArticleDetailsRecommendationsSchema,
 } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
