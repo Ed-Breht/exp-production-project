@@ -9,7 +9,7 @@ import {
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
 import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { fetchArticlesList } from '../../modal/services/fetchArticlesList/fetchArticlesList';
 import {
