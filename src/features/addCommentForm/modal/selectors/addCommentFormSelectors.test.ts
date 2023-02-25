@@ -1,5 +1,8 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { addCommentFormError, addCommentFormText } from './addCommentFormSelectors';
+import {
+    addCommentFormError,
+    addCommentFormText,
+} from './addCommentFormSelectors';
 
 describe('getLoAddCommentFormSelectors', () => {
     test('should return text', () => {

@@ -14,7 +14,6 @@ export const addCommentFormSlice = createSlice({
             state.text = action.payload;
         },
     },
-
 });
 
 export const { actions: addCommentFormActions } = addCommentFormSlice;

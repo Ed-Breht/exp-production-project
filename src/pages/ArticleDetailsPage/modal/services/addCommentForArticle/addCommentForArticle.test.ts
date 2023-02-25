@@ -4,7 +4,8 @@ import { addCommentForArticle } from './addCommentForArticle';
 const state = {
     user: {
         authData: {
-            username: 'User', id: '1',
+            username: 'User',
+            id: '1',
         },
         _inited: true,
     },
@@ -33,9 +34,7 @@ describe('addCommentForArticle', () => {
 
     test('error request', async () => {
         const thunk = new TestAsyncThunk(addCommentForArticle, state);
-        thunk.api.post.mockReturnValue(
-            Promise.resolve({ status: 403 }),
-        );
+        thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk('text');
 
         expect(result.meta.requestStatus).toBe('rejected');

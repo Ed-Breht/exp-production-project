@@ -17,8 +17,8 @@ describe('counterSlice', () => {
     });
 
     test('should work with empty state', () => {
-        expect(
-            counterReducer(undefined, counterActions.increment()),
-        ).toEqual({ value: 1 });
+        expect(counterReducer(undefined, counterActions.increment())).toEqual({
+            value: 1,
+        });
     });
 });

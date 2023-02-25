@@ -5,15 +5,24 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Input } from '@/shared/ui/Input';
 import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
-import { addCommentFormActions, addCommentFormReducer } from '../../modal/slice/addCommentFormSlice';
-import { addCommentFormError, addCommentFormText } from '../../modal/selectors/addCommentFormSelectors';
+import {
+    addCommentFormActions,
+    addCommentFormReducer,
+} from '../../modal/slice/addCommentFormSlice';
+import {
+    addCommentFormError,
+    addCommentFormText,
+} from '../../modal/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 interface addCommentFormProps {
     className?: string;
-    onSendComment: (text: string) => void
+    onSendComment: (text: string) => void;
 }
 
 const reducers: ReducersList = {
@@ -26,9 +35,12 @@ const AddCommentForm = (props: addCommentFormProps) => {
     const text = useSelector(addCommentFormText);
     const error = useSelector(addCommentFormError);
     const dispatch = useAppDispatch();
-    const onCommentTextChange = useCallback((value: string) => {
-        dispatch(addCommentFormActions.setText(value));
-    }, [dispatch]);
+    const onCommentTextChange = useCallback(
+        (value: string) => {
+            dispatch(addCommentFormActions.setText(value));
+        },
+        [dispatch],
+    );
 
     const onSendHandler = useCallback(() => {
         onSendComment(text || '');
@@ -49,7 +61,10 @@ const AddCommentForm = (props: addCommentFormProps) => {
                     value={text}
                     onChange={onCommentTextChange}
                 />
-                <Button data-testid="AddCommentForm.Button" onClick={onSendHandler}>
+                <Button
+                    data-testid="AddCommentForm.Button"
+                    onClick={onSendHandler}
+                >
                     {t('Отправить')}
                 </Button>
             </HStack>

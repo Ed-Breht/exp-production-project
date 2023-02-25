@@ -5,7 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Text, TextTheme } from '@/shared/ui/Text';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
 import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 import { loginByUsername } from '../../modal/services/loginByUsername/loginByUsername';
@@ -16,8 +19,8 @@ import { getLoginError } from '../../modal/selectors/getLoginError/getLoginError
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-  className?: string;
-  onSuccess: () => void;
+    className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -56,7 +59,10 @@ const LoginForm = memo((props: LoginFormProps) => {
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
-            <form onSubmit={onLoginClick} className={classNames(cls.LoginForm, {}, [className])}>
+            <form
+                onSubmit={onLoginClick}
+                className={classNames(cls.LoginForm, {}, [className])}
+            >
                 <Text title={t('Форма авторизации')} />
                 {error && (
                     <Text

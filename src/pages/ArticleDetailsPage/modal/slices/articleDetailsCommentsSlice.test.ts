@@ -1,17 +1,17 @@
-import {
-    fetchCommentsByArticleId,
-} from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 
-const comments = [{
-    id: '1',
-    text: 'some comment',
-    user: {
+const comments = [
+    {
         id: '1',
-        username: 'Ed',
+        text: 'some comment',
+        user: {
+            id: '1',
+            username: 'Ed',
+        },
     },
-}];
+];
 
 describe('articleDetailsCommentsSlice', () => {
     test('test service pending', () => {
@@ -21,11 +21,16 @@ describe('articleDetailsCommentsSlice', () => {
             ids: [],
             entities: {},
         };
-        expect(articleDetailsCommentsReducer(
-            state as ArticleDetailsCommentsSchema,
-            fetchCommentsByArticleId.pending,
-        )).toEqual({
-            isLoading: true, error: undefined, ids: [], entities: {},
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.pending,
+            ),
+        ).toEqual({
+            isLoading: true,
+            error: undefined,
+            ids: [],
+            entities: {},
         });
     });
 
@@ -36,10 +41,12 @@ describe('articleDetailsCommentsSlice', () => {
             ids: [],
             entities: {},
         };
-        expect(articleDetailsCommentsReducer(
-            state as ArticleDetailsCommentsSchema,
-            fetchCommentsByArticleId.fulfilled(comments, '', ''),
-        )).toEqual({
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.fulfilled(comments, '', ''),
+            ),
+        ).toEqual({
             isLoading: false,
             error: undefined,
             ids: ['1'],

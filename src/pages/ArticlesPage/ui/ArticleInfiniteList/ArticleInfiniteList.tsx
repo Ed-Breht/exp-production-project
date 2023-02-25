@@ -24,7 +24,13 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     const error = useSelector(getArticlesPageError);
 
     if (error) {
-        return <Text size={TextSize.L} align={TextAlign.CENTER} text={t('Произошла ошибка')} />;
+        return (
+            <Text
+                size={TextSize.L}
+                align={TextAlign.CENTER}
+                text={t('Произошла ошибка')}
+            />
+        );
     }
 
     return (
