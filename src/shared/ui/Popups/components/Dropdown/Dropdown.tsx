@@ -22,7 +22,7 @@ interface DropdownProps {
 }
 
 export function Dropdown(props: DropdownProps) {
-    const { className, trigger, items, direction = 'bottom right' } = props;
+    const { className, trigger, items, direction = 'bottom left' } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
 

@@ -11,13 +11,15 @@ import {
     userActions,
 } from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
+import { DropdownDirection } from '@/shared/types/ui';
 
 interface AvatarDropdownProps {
     className?: string;
+    direction?: DropdownDirection;
 }
 
 export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
-    const { className } = props;
+    const { className, direction = 'bottom right' } = props;
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const isAdmin = useSelector(isUserAdmin);
@@ -36,7 +38,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
     return (
         <Dropdown
-            direction="bottom left"
+            direction={direction}
             className={classNames('', {}, [className])}
             items={[
                 ...(isAdminPanelAvailable
