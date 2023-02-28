@@ -6,7 +6,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';

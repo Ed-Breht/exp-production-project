@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import { HStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 import { Button, ButtonTheme } from '@/shared/ui/Button';

@@ -7,7 +7,7 @@ import { getUIScrollByPath, uiActions } from '@/features/UI';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
 

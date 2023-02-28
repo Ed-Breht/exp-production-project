@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleSortField, ArticleView, ArticleType } from '@/entities/Article';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import { Card } from '@/shared/ui/Card';
 import { Input } from '@/shared/ui/Input';
 import { SortOrder } from '@/shared/types/sort';

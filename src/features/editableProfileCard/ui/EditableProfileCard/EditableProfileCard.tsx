@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';

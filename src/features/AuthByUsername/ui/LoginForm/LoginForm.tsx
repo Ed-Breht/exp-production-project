@@ -9,7 +9,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDipstch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
 import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 import { loginByUsername } from '../../modal/services/loginByUsername/loginByUsername';
 import { getLoginUsername } from '../../modal/selectors/getLoginUsername/getLoginUsername';
