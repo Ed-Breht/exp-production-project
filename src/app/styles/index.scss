@@ -1,10 +1,9 @@
 @import "reset";
-@import "app/styles/variable/global.scss";
-@import "app/styles/themes/dark.scss";
-@import "app/styles/themes/normal.scss";
-@import "app/styles/themes/orange.scss";
+@import "variable/global";
+@import "themes/normal";
+@import "themes/dark";
+@import "themes/orange";
 
-body,
 .app,
 .app_modal,
 .app_drawer {
@@ -12,9 +11,9 @@ body,
   color: var(--primary-color);
 }
 
-.app{
-  min-height: 100vh;
+.app {
   background: var(--bg-color);
+  min-height: 100vh;
 }
 
 .content-page {

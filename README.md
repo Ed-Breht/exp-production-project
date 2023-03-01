@@ -20,8 +20,8 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run lint:ts:fix` - Исправление ts файлов линтером
 - `npm run lint:scss` - Проверка scss файлов style линтером
 - `npm run lint:scss:fix` - Исправление scss файлов style линтером
-- `npm run test:unit` - Хапуск unit тестов с jest
-- `npm run test:ui` - Хапуск скриншотных тестов с loki
+- `npm run test:unit` - Запуск unit тестов с jest
+- `npm run test:ui` - Запуск скриншотных тестов с loki
 - `npm run test:ui:ok` - Подтверждение новых скриншотов
 - `npm run test:ui:ci` - Запуск скриншотных тестов в CI
 - `npm run test:ui:report` - Генерация полного отчета для скриншотных тестов
@@ -67,7 +67,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 ## Линтинг
 
-В проекте используется eslint для проверки typescript кода и stylelint для проверки файлов со стилями.
+В проекте используется eslint для проверки typescript кода.
 
 Также для строгого контроля главных архитектурных принципов
 используется собственный eslint plugin *eslint-plugin-ed-product-plugin*,
