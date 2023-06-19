@@ -1,15 +1,11 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Page } from '@/widgets/Page';
 
-const AboutPage = memo(() => {
+const AboutPage = () => {
     const { t } = useTranslation('about');
-    return (
-        <Page>
-            <div data-testid="AboutPage">{t('О сайте')}</div>
-            <div>{t('Авторизоваться можно по логину admin и паролю 123')}</div>
-        </Page>
-    );
-});
+
+    return <Page data-testid="AboutPage">{t('О сайте')}</Page>;
+};
 
 export default AboutPage;

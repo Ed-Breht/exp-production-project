@@ -1,10 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import ArticleRating from './ArticleRating';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-    title: 'features/Article/articleRating',
+    title: 'features/ArticleRating',
     component: ArticleRating,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -22,10 +23,7 @@ Normal.args = {
 Normal.decorators = [
     StoreDecorator({
         user: {
-            authData: {
-                id: '1',
-                username: 'Test user',
-            },
+            authData: { id: '1' },
         },
     }),
 ];
@@ -51,10 +49,7 @@ WithoutRate.args = {
 WithoutRate.decorators = [
     StoreDecorator({
         user: {
-            authData: {
-                id: '1',
-                username: 'Test user',
-            },
+            authData: { id: '1' },
         },
     }),
 ];

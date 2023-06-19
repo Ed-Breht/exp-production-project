@@ -20,9 +20,9 @@ import {
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
-import { AppRouteProps } from '@/shared/types/router';
+import { AppRoutesProps } from '@/shared/types/router';
 
-export const routeConfig: Record<AppRoutes, AppRouteProps> = {
+export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
         path: getRouteMain(),
         element: <MainPage />,

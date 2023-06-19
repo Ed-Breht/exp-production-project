@@ -1,5 +1,5 @@
 import { Profile } from '@/entities/Profile';
-import { ValidateProfileError } from '../../model/consts/consts';
+import { ValidateProfileError } from '../consts/consts';
 
 export interface ProfileSchema {
     data?: Profile;
@@ -7,5 +7,5 @@ export interface ProfileSchema {
     isLoading: boolean;
     error?: string;
     readonly: boolean;
-    validateError?: ValidateProfileError[];
+    validateErrors?: ValidateProfileError[];
 }

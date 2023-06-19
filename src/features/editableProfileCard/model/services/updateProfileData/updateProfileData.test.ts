@@ -5,17 +5,17 @@ import { ValidateProfileError } from '../../consts/consts';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
-    id: '1',
     username: 'admin',
-    age: 24,
-    country: Country.Russia,
-    lastname: 'Breht',
-    first: 'Ed',
-    currency: Currency.EUR,
-    city: 'Test',
+    age: 22,
+    country: Country.Ukraine,
+    lastname: 'ulbi tv',
+    first: 'asd',
+    city: 'asf',
+    currency: Currency.USD,
+    id: '1',
 };
 
-describe('updateProfileData', () => {
+describe('updateProfileData.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(updateProfileData, {
             profile: {
@@ -23,11 +23,8 @@ describe('updateProfileData', () => {
             },
         });
 
-        thunk.api.put.mockReturnValue(
-            Promise.resolve({
-                data,
-            }),
-        );
+        thunk.api.put.mockReturnValue(Promise.resolve({ data }));
+
         const result = await thunk.callThunk();
 
         expect(thunk.api.put).toHaveBeenCalled();
@@ -42,6 +39,7 @@ describe('updateProfileData', () => {
             },
         });
         thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }));
+
         const result = await thunk.callThunk();
 
         expect(result.meta.requestStatus).toBe('rejected');

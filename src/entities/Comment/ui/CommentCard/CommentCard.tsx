@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppLink } from '@/shared/ui/AppLink';
-import { VStack } from '@/shared/ui/Stack';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import cls from './CommentCard.module.scss';
-import { Comment } from '../../modal/types/comment';
+import { Comment } from '../../model/types/comment';
 import { getRouteProfile } from '@/shared/const/router';
 
 interface CommentCardProps {
@@ -37,7 +37,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
                         className={cls.username}
                     />
                 </div>
-                <Skeleton width="100%" className={cls.text} height={50} />
+                <Skeleton className={cls.text} width="100%" height={50} />
             </VStack>
         );
     }
@@ -48,21 +48,21 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
     return (
         <VStack
+            data-testid="CommentCard.Content"
             gap="8"
             max
             className={classNames(cls.CommentCard, {}, [className])}
-            data-testid="CommentCard.Content"
         >
             <AppLink
                 to={getRouteProfile(comment.user.id)}
                 className={cls.header}
             >
                 {comment.user.avatar ? (
-                    <Avatar src={comment.user.avatar} size={30} />
+                    <Avatar size={30} src={comment.user.avatar} />
                 ) : null}
-                <Text className={cls.username} text={comment.user.username} />
+                <Text className={cls.username} title={comment.user.username} />
             </AppLink>
-            <Text className={cls.text} title={comment.text} />
+            <Text className={cls.text} text={comment.text} />
         </VStack>
     );
 });

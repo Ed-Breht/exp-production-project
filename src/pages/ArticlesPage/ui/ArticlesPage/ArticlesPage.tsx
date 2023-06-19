@@ -7,14 +7,14 @@ import {
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDipastch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from '@/widgets/Page';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
-import { initArticlesPage } from '../../modal/services/initArticlesPage/initArticlesPage';
-import { articlesPageReducer } from '../../modal/slices/articlesPageSlice';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
+import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
-import { fetchNextArticlesPage } from '../../modal/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 
 interface ArticlesPageProps {
@@ -26,18 +26,18 @@ const reducers: ReducersList = {
 };
 
 const ArticlesPage = (props: ArticlesPageProps) => {
-    const { t } = useTranslation('article');
     const { className } = props;
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const [searchParams] = useSearchParams();
-
-    useInitialEffect(() => {
-        dispatch(initArticlesPage(searchParams));
-    });
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
+
+    useInitialEffect(() => {
+        dispatch(initArticlesPage(searchParams));
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { NotificationList } from './NotificationList';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
@@ -28,12 +29,20 @@ Normal.parameters = {
                 {
                     id: '1',
                     title: 'Уведомление',
-                    description: 'Ты делаешь крутой проект',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
                 {
                     id: '2',
                     title: 'Уведомление 2',
-                    description: 'Красава!',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
+                },
+                {
+                    id: '3',
+                    title: 'Уведомление 3',
+                    description:
+                        'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
             ],
         },

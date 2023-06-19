@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import AvatarImg from '@/shared/assets/tests/storybook.jpg';
+import avatar from '@/shared/assets/tests/storybook.jpg';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -21,13 +21,13 @@ export const Primary = Template.bind({});
 Primary.args = {
     data: {
         username: 'admin',
-        age: 24,
-        country: Country.Russia,
-        lastname: 'Breht',
-        first: 'Ed',
-        currency: Currency.EUR,
-        city: 'Test',
-        avatar: AvatarImg,
+        age: 22,
+        country: Country.Ukraine,
+        lastname: 'ulbi tv',
+        first: 'asd',
+        city: 'asf',
+        currency: Currency.USD,
+        avatar,
     },
 };
 

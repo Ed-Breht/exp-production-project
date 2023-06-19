@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { ArticleList } from '@/entities/Article';
-import { Text, TextSize } from '@/shared/ui/Text';
-import { VStack } from '@/shared/ui/Stack';
-import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { useArticleRecommendationsList } from '../../api/aritcleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {
     className?: string;
@@ -13,7 +13,7 @@ interface ArticleRecommendationsListProps {
 export const ArticleRecommendationsList = memo(
     (props: ArticleRecommendationsListProps) => {
         const { className } = props;
-        const { t } = useTranslation('Article');
+        const { t } = useTranslation();
         const {
             isLoading,
             data: articles,
@@ -26,9 +26,9 @@ export const ArticleRecommendationsList = memo(
 
         return (
             <VStack
+                data-testid="ArticleRecommendationsList"
                 gap="8"
                 className={classNames('', {}, [className])}
-                data-testid="ArticleRecommendationsList"
             >
                 <Text size={TextSize.L} title={t('Рекомендуем')} />
                 <ArticleList articles={articles} target="_blank" />

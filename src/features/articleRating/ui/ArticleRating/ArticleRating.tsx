@@ -1,14 +1,13 @@
-import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { RatingCard } from '@/entities/Rating';
 import {
     useGetArticleRating,
     useRateArticle,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 export interface ArticleRatingProps {
     className?: string;
@@ -16,15 +15,14 @@ export interface ArticleRatingProps {
 }
 
 const ArticleRating = memo((props: ArticleRatingProps) => {
-    const { t } = useTranslation();
     const { className, articleId } = props;
+    const { t } = useTranslation();
     const userData = useSelector(getUserAuthData);
 
     const { data, isLoading } = useGetArticleRating({
         articleId,
         userId: userData?.id ?? '',
     });
-
     const [rateArticleMutation] = useRateArticle();
 
     const handleRateArticle = useCallback(
@@ -36,8 +34,9 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
                     rate: starsCount,
                     feedback,
                 });
-            } catch (error) {
-                console.log(error);
+            } catch (e) {
+                // handle error
+                console.log(e);
             }
         },
         [articleId, rateArticleMutation, userData?.id],
@@ -65,10 +64,10 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
 
     return (
         <RatingCard
-            onAccept={onAccept}
             onCancel={onCancel}
+            onAccept={onAccept}
             rate={rating?.rate}
-            className={classNames('', {}, [className])}
+            className={className}
             title={t('Оцените статью')}
             feedbackTitle={t(
                 'Оставьте свой отзыв о статье, это поможет улучшить качество',

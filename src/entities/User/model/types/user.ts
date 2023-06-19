@@ -1,5 +1,5 @@
+import { UserRole } from '../consts/userConsts';
 import { FeatureFlags } from '@/shared/types/featureFlags';
-import { UserRole } from '../consts/consts';
 import { JsonSettings } from './jsonSettings';
 
 export interface User {
@@ -13,5 +13,6 @@ export interface User {
 
 export interface UserSchema {
     authData?: User;
+
     _inited: boolean;
 }

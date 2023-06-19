@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Article, ArticleType, ArticleBlockType } from '@/entities/Article';
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -24,11 +24,11 @@ const article: Article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'admin',
+        username: 'Ulbi tv',
     },
-    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',

@@ -8,7 +8,8 @@ interface UseThemeResult {
 }
 
 export function useTheme(): UseThemeResult {
-    const { setTheme, theme } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
+
     const toggleTheme = (saveAction?: (theme: Theme) => void) => {
         let newTheme: Theme;
         switch (theme) {
@@ -25,9 +26,12 @@ export function useTheme(): UseThemeResult {
                 newTheme = Theme.LIGHT;
         }
         setTheme?.(newTheme);
-        document.body.className = newTheme;
+
         saveAction?.(newTheme);
     };
 
-    return { theme: theme || Theme.LIGHT, toggleTheme };
+    return {
+        theme: theme || Theme.LIGHT,
+        toggleTheme,
+    };
 }
