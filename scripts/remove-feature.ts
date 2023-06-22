@@ -20,8 +20,8 @@ if (featureState !== 'on' && featureState !== 'off') {
 
 const project = new Project({});
 
-project.addSourceFilesAtPaths('src/**/*.ts');
-project.addSourceFilesAtPaths('src/**/*.tsx');
+project.addSourceFilesAtPaths('src/**/ArticleDetailsPage.ts');
+project.addSourceFilesAtPaths('src/**/ArticleDetailsPage.tsx');
 
 const files = project.getSourceFiles();
 
@@ -80,10 +80,8 @@ const replaceToggleFunction = (node: Node) => {
     }
 };
 
-const getAttributeNodeByName = (
-    jsxAttributes: JsxAttribute[],
-    name: string,
-) => jsxAttributes.find((node) => node.getName() === name);
+const getAttributeNodeByName = (jsxAttributes: JsxAttribute[], name: string) =>
+    jsxAttributes.find((node) => node.getName() === name);
 
 const getReplacedComponent = (attribute?: JsxAttribute) => {
     const value = attribute
