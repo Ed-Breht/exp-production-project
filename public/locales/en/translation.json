@@ -39,17 +39,17 @@
     "Экономика": "Economics",
     "Все статьи": "All articles",
     "Наука": "Science",
-    "Сортировать по": "Sort by",
+    "Сортировать ПО": "Sort BY",
     "дате создания": "created date",
     "названию": "name",
     "просмотрам": "views",
     "Создание новой статьи": "Create new article",
     "Редактирование статьи с ID = ": "Edit article with ID = ",
-    "Ed app": "Ed app",
+    "Ulbi TV App": "Ulbi TV App",
     "Создать статью": "Create article",
     "Профиль пользователя": "Профиль пользователя",
-    "Закрыть": "Close",
-    "Админка": "Admin",
-    "Спасибо за оценку!": "Thank you for rating!",
-    "Авторизоваться можно по логину admin и паролю 123": "You can log in using the login admin and password 123"
+    "Закрыть": "Закрыть",
+    "{{count}} просмотров_zero": "{{count}} views",
+    "{{count}} просмотров_one": "{{count}} view",
+    "{{count}} просмотров_other": "{{count}} views"
 }
